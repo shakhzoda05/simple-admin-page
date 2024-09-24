@@ -13,12 +13,11 @@ function AddUser() {
     e.preventDefault();
     const newUser = { name, surname, age, address };
     
-    // Store user data (for simplicity, we use localStorage)
     const users = JSON.parse(localStorage.getItem('users')) || [];
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
     
-    navigate('/users'); // Redirect to User List page after saving
+    navigate('/users'); 
   };
 
   return (
